@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page{
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    transition: 0.6s all ease-in-out;
+}
+
+.visible{
+    left: 0;
+    transition: 0.3s all ease-in-out;
+}
+
+.box{
+    width: 80%;
+    height: 80%;
+    display: grid;
+    place-items: center;
+    border: 1px solid white;
+}
+
+#imagebox{
+    background-image: url(./assets/matt-hardy-6ArTTluciuA-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+}
+
+#page1{
+    background-color: lightskyblue;
+}
+#page2{
+    background-color: lightpink;
+}
+#page3{
+    background-color: lightgreen;
+}
+#page4{
+    background-color: lightsalmon;
+}
+
+h1{
+    font-family: Raleway;
+    color: black
+}
