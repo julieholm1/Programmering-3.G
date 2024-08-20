@@ -36,6 +36,17 @@
     color: white;
 }
 
+#rightimage{
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/engin-akyurt-RFt2XrTJllM-unsplash.jpg);
+    background-size: cover;
+}
+
+.halfbox{
+    grid-template-columns: 1fr 1fr;
+}
+
 #page1{
     background-color: lightskyblue;
 }
@@ -43,8 +54,15 @@
     background-color: lightpink;
 }
 #page3{
-    background-color: lightgreen;
+    background-color: lightgray;
+    grid-template-columns: 4fr 2fr 1fr;
 }
+
+#page3 div{
+    width: 100%;
+    height: 100%;
+}
+
 #page4{
     background-color: lightsalmon;
 }
