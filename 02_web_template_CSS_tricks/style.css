@@ -4,12 +4,42 @@
     box-sizing: border-box;
 }
 
+header{
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    z-index: 2;
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+header .menuitem{
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    display: grid;
+    place-items: center;
+    border-right: 1px solid black;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.menuitem:hover{
+    border-bottom: 6px solid black;
+    font-size: 2.4rem;
+}
+
+.menuitem.active{
+    border-bottom: 6px solid red;
+}
+
 .page{
     position: fixed;
-    top: 0;
     left: -100vw;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
+    top: 10vh;
     overflow: hidden;
     display: grid;
     place-items: center;
@@ -27,6 +57,25 @@
     display: grid;
     place-items: center;
     border: 1px solid white;
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: whitesmoke;
+}
+
+.fixed{
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    color: lightgrey;
+    font-size: 4rem;
+    font-variant: small-caps;
+    text-shadow: 4px 4px 4px rgb(104, 242, 104);
 }
 
 #imagebox{
