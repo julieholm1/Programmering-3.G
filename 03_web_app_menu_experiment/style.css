@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Raleway;
+
 }
 
 header{
@@ -9,7 +11,7 @@ header{
     height: 10vh;
     position: fixed;
     z-index: 2;
-    background-color: lightgray;
+    background-color: lightblue;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     transition: all 0.3s ease-in-out;
@@ -76,60 +78,260 @@ header.hidden:hover .menuitem{
     transition: 0.3s all ease-in-out;
 }
 
-
 #page1{
-    background-color: grey;
-    place-items: center;
+    background-color: black;
     grid-template-columns: 3 fr 1fr 1fr;
+    background-image: linear-gradient(180deg, black, darkgrey);
 }
 
-.box1{
-    width: 50%;
-    height: 100%;
-    grid-template-columns: grid ;
+#page1 h1{
+    color: white;
+    font-size: 50PX;
+    text-align: center;
     position: relative;
+    top: 17rem;
 }
 
-#bog1{
-    width: 40%;
-    height: 95%;
-    position: absolute;
-    bottom: 1rem;
-    left: 0.5rem;
-    background-image: url(./assets/bitter\ notes.jpg);
-    background-position: center center;
-}
-
-.box2{
-    width: 50%;
-    height: 100%;
-    grid-template-columns: grid ;
+#page1 p{
+    color: white;
+    font-size: 25px;
+    text-align: center;
     position: relative;
+    top: 15rem;
 }
 
-#bog2{
-    width: 40%;
-    height: 95%;
+.fit-picture1{
+    width: 430px;
     position: absolute;
-    bottom: 1rem;
-    right: 0.5rem;
-    background-image: url(./assets/sweet\ strings.jpg);
-    background-position: center center;
+    left: 2rem;
+    top: 1rem;
+}
+
+.fit-picture2{
+    width: 430px;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
 }
 
 #page2{
-    background-color: lightpink;
-    top: 1%;
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Arrangerer børnene vertikalt */
+    padding-top: 2rem; /* Lidt afstand fra toppen */
+    background-image: linear-gradient(darkgrey, black);
 }
 
-.box1
+.info{
+    width: 55%;
+    height: 46%;
+    background-color: rgb(73, 171, 210);
+    position: absolute;
+    padding: 10px;
+    bottom: 25rem;
+    right: 10rem;
+    border: 2px solid black;
+}
 
-#page3{
-    background-color: lightgoldenrodyellow;
+.author{
+    width: 30%;
+    height: 46%;
+    position: absolute;
+    top: 11.5rem;
+    left: 10rem;
+    right: 60rem;
+    bottom: 1rem;
+    background-size: cover;
+    background-image: url(./assets/auhtor\ aly\ beck.jpg);
+}
+
+.info p{
+    font-size: 20px;
+    color: black;
+}
+
+#web{
+    width: 10%;
+    height: 33%;
+    position: absolute;
+    left: 10rem;
+    right: 60rem;
+    bottom: 1rem;
+    background-size: cover;
+    background-image: url(./assets/web\ of\ lie.jpg);
+}
+
+#tangled{
+    width: 10%;
+    height: 33%;
+    position: absolute;
+    left: 37rem;
+    right: 60rem;
+    bottom: 1rem;
+    background-size: cover;
+    background-image: url(./assets/Tangled\ Truth.jpg);
+}
+
+#wicked{
+    width: 10%;
+    height: 33%;
+    position: absolute;
+    left: 65rem;
+    right: 60rem;
+    bottom: 1rem;
+    background-size: cover;
+    background-image: url(./assets/Wicked\ Deceit.jpg)
+}
+
+#bitter{
+    width: 10%;
+    height: 33%;
+    position: absolute;
+    right: 37rem;
+    bottom: 1rem;
+    background-size: cover;
+    background-image: url(./assets/bitter\ notes.jpg)
+}
+
+#sweet{
+    width: 10%;
+    height: 33%;
+    position: absolute;
+    right: 10rem;
+    bottom: 1rem;
+    background-size: cover;
+    background-image: url(./assets/sweet\ strings.jpg)
+}
+
+
+#page3 {
+    background-color: lavender;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Arrangerer børnene vertikalt */
+    justify-content: flex-start; /* Sørger for at indholdet starter fra toppen */
+    align-items: center; /* Centrerer indholdet horisontalt */
+    padding-top: 2rem; /* Lidt afstand fra toppen */
+    background-image: linear-gradient(darkgrey, black);
+}
+
+.star{
+    position: relative;
+    display: inline-block;
+    color: yellow;
+}
+
+.resume3{
+    width: 73%;
+    height: 46%;
+    background-color: rgb(73, 171, 210);
+    position: absolute;
+    padding: 10px;
+    top: 15rem;
+    left: 35rem;
+    border: 2px solid black;
+}
+
+.resume3 p{
+    font-size: 17px;
+    color: black;
+}
+
+.review3{
+    width: 96.7%;
+    height: 27%;
+    background-color: rgb(73, 171, 210);
+    position: absolute;
+    top: 47rem;
+    left: 1rem;
+    bottom: 1rem;
+    border: 2px solid black;
+    font-size: 16px;
+}
+
+.review3 p{
+    margin-bottom: 1px; /* Tilføjer lidt plads under hvert anmeldelsesafsnit */
+    font-size: 16px; /* Ændrer skriftstørrelsen efter behov */
+    line-height: 1; /* Forbedrer læsbarheden ved at justere linjehøjden */
+    color: black; /* Hvis du vil have teksten til at skille sig ud i den blå boks */
+    padding: 10px;
+}
+
+.image3{
+    width: 23%;
+    height: 65%;
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    right: 60rem;
+    bottom: 1rem;
+    background-size: cover;
+    background-image: url(./assets/bitter\ notes.jpg)
 }
 
 #page4{
-    background-color: lightsalmon;
+    background-color: lavender;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Arrangerer børnene vertikalt */
+    justify-content: flex-start; /* Sørger for at indholdet starter fra toppen */
+    align-items: center; /* Centrerer indholdet horisontalt */
+    padding-top: 2rem; /* Lidt afstand fra toppen */
+    background-image: linear-gradient(darkgrey, black);
+}
+
+.resume4{
+    width: 73%;
+    height: 46%;
+    background-color: rgb(73, 171, 210);
+    position: absolute;
+    padding: 5px;
+    top: 15rem;
+    left: 35rem;
+    border: 2px solid black;
+}
+
+.resume4 p{
+    margin-bottom: 0.5px; /* Tilføjer lidt plads under hvert anmeldelsesafsnit */
+    font-size: 17px; /* Ændrer skriftstørrelsen efter behov */
+    line-height: 1.5; /* Forbedrer læsbarheden ved at justere linjehøjden */
+    color: black; /* Hvis du vil have teksten til at skille sig ud i den blå boks */
+    padding: 2px;
+}
+
+.review4{
+    width: 96.7%;
+    height: 27%;
+    background-color: rgb(73, 171, 210);
+    position: absolute;
+    padding: 5px;
+    top: 47rem;
+    left: 1rem;
+    bottom: 1rem;
+    border: 2px solid black;
+    font-size: 16px;
+}
+
+.review4 p{
+    margin-bottom: 1px; /* Tilføjer lidt plads under hvert anmeldelsesafsnit */
+    font-size: 16px; /* Ændrer skriftstørrelsen efter behov */
+    line-height: 1; /* Forbedrer læsbarheden ved at justere linjehøjden */
+    color: black; /* Hvis du vil have teksten til at skille sig ud i den blå boks */
+    padding: 7px;
+}
+
+.image4{
+    width: 23%;
+    height: 65%;
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    right: 60rem;
+    bottom: 1rem;
+    background-size: cover;
+    background-image: url(./assets/sweet\ strings.jpg);
 }
 
 h1{
