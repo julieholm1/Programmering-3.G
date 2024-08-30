@@ -1,0 +1,11 @@
+.star-container{
+    position: absolute;
+    left: 50rem;
+    top: 20rem;
+}
+
+.rating-container{
+    position: absolute;
+    left: 50rem;
+    top: 15rem;
+}

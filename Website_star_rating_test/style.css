@@ -277,22 +277,6 @@ header.hidden:hover .menuitem{
     color: black; /* Hvis du vil have teksten til at skille sig ud i den blå boks */
 }
 
-.rating-container3{
-    position: absolute;
-    left: 24.5%;
-    top: 10%;
-    z-index: 2;
-    font-size: 30px;
-}
-
-.star-container3{
-    position: absolute;
-    left: 24.5%;
-    top: 17%;
-    z-index: 2;
-    font-size: 40px;
-}
-
 .image3{
     width: 23%;
     height: 65%;
@@ -359,22 +343,6 @@ header.hidden:hover .menuitem{
     font-size: 20px; /* Ændrer skriftstørrelsen efter behov */
     line-height: 2; /* Forbedrer læsbarheden ved at justere linjehøjden */
     color: black; /* Hvis du vil have teksten til at skille sig ud i den blå boks */
-}
-
-.rating-container4{
-    position: absolute;
-    right: 26%;
-    top: 10%;
-    z-index: 2;
-    font-size: 30px;
-}
-
-.star-container4{
-    position: absolute;
-    right: 26%;
-    top: 17%;
-    z-index: 2;
-    font-size: 40px;
 }
 
 .image4{
