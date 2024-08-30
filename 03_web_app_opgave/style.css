@@ -65,6 +65,7 @@ header .menuitem{
 }
 #page2{
     background-color: lightpink;
+    grid-template-columns: 1fr 1fr;
 }
 #page3{
     background-color: lightgoldenrodyellow;
