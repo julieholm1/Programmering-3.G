@@ -1,3 +1,4 @@
+/*General layout*/
 *{
     margin: 0;
     padding: 0;
@@ -16,7 +17,6 @@ header{
     grid-template-columns: repeat(4, 1fr);
     transition: all 0.3s ease-in-out;
 }
-
 header.hidden{
     height: 2vh;
 
@@ -63,10 +63,10 @@ header.hidden:hover .menuitem{
 
 .page{
     position: fixed;
+    top: 0;
     left: -100vw;
-    height: 100vh;
     width: 100vw;
-    top: 0vw;
+    height: 100vh;
     overflow: hidden;
     display: grid;
     place-items: center;
@@ -79,9 +79,35 @@ header.hidden:hover .menuitem{
 }
 
 #page1{
-    grid-template-columns: 3 fr 1fr 1fr;
-    background-image: linear-gradient(180deg, black, darkgrey);
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr ;
 }
+
+
+.page div{
+    width: 100%;
+    height: 100%;
+}
+
+.left{
+    background-color: lightblue;
+}
+
+.mid{
+    background-color: lightcoral;
+}
+
+.right{
+    background-color: lightgreen;
+}
+
+/*
+#mid{
+    color: white;
+    text-align: center;
+
+}
+
 
 #page1 h1{
     color: white;
@@ -99,17 +125,16 @@ header.hidden:hover .menuitem{
     position: relative;
     top: 8rem;
     font-size: 30px;
+}*/
 
-}
-
-.fit-picture1{
+#image1{
     width: 30%;
     position: absolute;
     left: 0.5rem;
     top: 1.2rem;
 }
 
-.fit-picture2{
+#image2{
     width: 30%;
     position: absolute;
     right: 0.5rem;
@@ -117,143 +142,146 @@ header.hidden:hover .menuitem{
 }
 
 #page2{
-    display: flex;
-    flex-direction: column; /* Arrangerer børnene vertikalt */
-    padding-top: 2rem; /* Lidt afstand fra toppen */
+    grid-template-rows: 0.5fr 2fr 0.5fr 2fr;
     background-image: linear-gradient(darkgrey, black);
 }
 
-.heading2{
-    color: black;
-    font-weight: bold;
-    font-size: 40px;  
+.top{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center ;
 }
 
-.info{
-    width: 56%;
-    height: 45%;
-    background-color: rgb(73, 171, 210);
-    position: absolute;
-    padding: 10px;
-    top: 5.5rem;
-    right: 3.5rem;
+#heading1{
+    font-size: 40px;
+    padding: 2px;
+}
+
+.mid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5px;
+}
+
+#author{
+    width: 30rem;
+    height: 27rem;
+    background-size: cover;
     border: 2px solid black;
-}
-
-.info p{
-    font-size: 24px;
-    color: black;
-
-}
-
-.author{
-    width: 35%;
-    height: 45%;
-    position: absolute;
-    top: 5.5rem;
-    left: 3.5rem;
-    right: 60rem;
-    bottom: 1rem;
-    background-size: cover;
     background-image: url(./assets/auhtor\ aly\ beck.jpg);
+    background-position: center;
 }
 
-.værker{
-    width: 23%;
-    height: 8%;
-    position: absolute;
-    top: 59%;
-    font-size: 25px;
-    color: black;
-    text-align: center;
-    font-size: 35px;
+#info{
+    width: 70vw;
+    height: 27rem;
+    border: 2px solid black;
+    background-color: rgb(73, 171, 210);
+    padding: 2px;
+}
+
+#info p{
+    font-size: 29px;
+}
+
+
+.heading2{
+    font-size: 30px;
+    place-items: center;
+    border: 2px solid black;
 
 }
 
-#web{
-    width: 10%;
-    height: 33%;
-    position: absolute;
-    left: 4%;
-    bottom: 1rem;
-    background-size: cover;
+
+.bottom{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px; /*Ny ændring*/
+    width: 99vw;
+    height: 98%;
+    padding: 20px; /*Ny ændring*/
+}
+
+.web, .tangled, .wicked, .bitter, .sweet{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+/*Individuel baggrunde*/
+.web{
     background-image: url(./assets/web\ of\ lie.jpg);
 }
-
-#tangled{
-    width: 10%;
-    height: 33%;
-    position: absolute;
-    left: 24%;
-    bottom: 1rem;
-    background-size: cover;
-    background-image: url(./assets/Tangled\ Truth.jpg);
+.tangled{
+    background-image: url(./assets/Tangled\ Truth.jpg);   
 }
 
-#wicked{
-    width: 10%;
-    height: 33%;
-    position: absolute;
-    left: 45%;
-    bottom: 1rem;
-    background-size: cover;
-    background-image: url(./assets/Wicked\ Deceit.jpg)
+.wicked{
+    background-image: url(./assets/Wicked\ Deceit.jpg);   
 }
 
-#bitter{
-    width: 10%;
-    height: 33%;
-    position: absolute;
-    right: 24%;
-    bottom: 1rem;
-    background-size: cover;
-    background-image: url(./assets/bitter\ notes.jpg)
+.bitter{
+    background-image: url(./assets/bitter\ notes.jpg);   
 }
 
-#sweet{
-    width: 10%;
-    height: 33%;
-    position: absolute;
-    right: 4%;
-    bottom: 1rem;
-    background-size: cover;
-    background-image: url(./assets/sweet\ strings.jpg)
+.sweet{
+    background-image: url(./assets/sweet\ strings.jpg);    
 }
 
 
 #page3 {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns: 1 for the image, 2 for the content */
+    grid-template-rows: auto;  /* Three rows for title, resume, and review */
+    gap: 20px;
+    padding: 20px;
+    height: 100vh;
+    background-image: linear-gradient(darkgrey, black);
+    /*
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: column; /* Arrangerer børnene vertikalt */
-    justify-content: flex-start; /* Sørger for at indholdet starter fra toppen */
-    align-items: center; /* Centrerer indholdet horisontalt */
-    padding-top: 2rem; /* Lidt afstand fra toppen */
-    background-image: linear-gradient(darkgrey, black);
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    padding-top: 2rem; 
+    background-image: linear-gradient(darkgrey, black); */
+}
+
+#page3 h1{
+    font-size: 3rem;
+    color: white;
+}
+
+.image3{
+    background-size: cover;
+    background-position: center;
+    background-image: url(./assets/bitter\ notes.jpg);
+    border: 2px solid black;
 }
 
 .resume3{
-    width: 73%;
-    height: 46%;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
     background-color: rgb(73, 171, 210);
-    position: absolute;
-    padding: 5px;
-    top: 24%;
-    left: 24.3%;
     border: 2px solid black;
+    padding: 15px;
 }
 
 .resume3 h3{
     font-size: 35px;
+    color: black;
 }
 
 .resume3 p{
-    font-size: 17px;
-    color: black;
     font-size: 21px;
     line-height: 1.5;
+    color: black;
 }
 
+/*Review box styling*/
 .review3{
     width: 96.7%;
     height: 27%;
@@ -277,7 +305,7 @@ header.hidden:hover .menuitem{
     color: black; /* Hvis du vil have teksten til at skille sig ud i den blå boks */
 }
 
-.image3{
+/*.image3{
     width: 23%;
     height: 65%;
     position: absolute;
@@ -287,7 +315,7 @@ header.hidden:hover .menuitem{
     bottom: 1rem;
     background-size: cover;
     background-image: url(./assets/bitter\ notes.jpg)
-}
+}*/
 
 #page4{
     width: 100vw;
@@ -365,5 +393,7 @@ h1{
 h3{
     color: black;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
+    padding: 0px;
+    margin: 0;
 }
