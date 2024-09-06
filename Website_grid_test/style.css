@@ -80,7 +80,9 @@ header.hidden:hover .menuitem{
 
 #page1{
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr ;
+    height: 100vh;
+    background-image: linear-gradient(darkgrey, black);
 }
 
 
@@ -89,56 +91,50 @@ header.hidden:hover .menuitem{
     height: 100%;
 }
 
-.left{
-    background-color: lightblue;
+.left1{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 2rem;
 }
 
-.mid{
-    background-color: lightcoral;
+#image1{
+    background-image: url(./assets/bitter\ notes.jpg);
+    height: 110%;
 }
 
-.right{
-    background-color: lightgreen;
-}
-
-/*
-#mid{
-    color: white;
+.center1{
+    display: grid;
+    grid-row: auto;
     text-align: center;
-
 }
-
 
 #page1 h1{
     color: white;
-    font-size: 50px;
-    text-align: center;
-    position: relative;
-    top: 8rem;
-    font-size: 70px;
+    font-size: 65px;
 }
 
 #page1 p{
     color: white;
-    font-size: 25px;
-    text-align: center;
-    position: relative;
-    top: 8rem;
-    font-size: 30px;
-}*/
+    font-size: 45px;
+    place-items: center;
+    font-family: 'Bebas Neue';
+}
 
-#image1{
-    width: 30%;
-    position: absolute;
-    left: 0.5rem;
-    top: 1.2rem;
+.right1{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 2rem;
 }
 
 #image2{
-    width: 30%;
-    position: absolute;
-    right: 0.5rem;
-    top: 1.2rem;
+    background-image: url(./assets/sweet\ strings.jpg);
+    height: 110%;
 }
 
 #page2{
@@ -146,7 +142,13 @@ header.hidden:hover .menuitem{
     background-image: linear-gradient(darkgrey, black);
 }
 
-.top{
+#page2 h1{
+margin-top: 1rem;
+font-size: 3rem;
+color: white;
+}
+
+.top2{
     display: grid;
     grid-template-columns: 1fr;
     place-items: center ;
@@ -155,9 +157,10 @@ header.hidden:hover .menuitem{
 #heading1{
     font-size: 40px;
     padding: 2px;
+    text-align: center;
 }
 
-.mid{
+.mid2{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 5px;
@@ -170,6 +173,7 @@ header.hidden:hover .menuitem{
     border: 2px solid black;
     background-image: url(./assets/auhtor\ aly\ beck.jpg);
     background-position: center;
+    margin-left: 2rem;
 }
 
 #info{
@@ -184,16 +188,13 @@ header.hidden:hover .menuitem{
     font-size: 29px;
 }
 
-
-.heading2{
+#heading2{
     font-size: 30px;
-    place-items: center;
-    border: 2px solid black;
-
+    padding: 2px;
+    text-align: center;
 }
 
-
-.bottom{
+.bottom2{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px; /*Ny ændring*/
@@ -233,65 +234,52 @@ header.hidden:hover .menuitem{
 
 #page3 {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Two columns: 1 for the image, 2 for the content */
-    grid-template-rows: auto;  /* Three rows for title, resume, and review */
-    gap: 20px;
-    padding: 20px;
+    grid-template-rows: 0.1fr 2fr 1fr; /* 3 rows, top, midt og bund*/
     height: 100vh;
     background-image: linear-gradient(darkgrey, black);
-    /*
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: center; 
-    padding-top: 2rem; 
-    background-image: linear-gradient(darkgrey, black); */
 }
 
 #page3 h1{
+    margin-top: 1rem;
     font-size: 3rem;
     color: white;
 }
 
-.image3{
+.top3{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 10px;
+}
+
+.left3 #image3{
+    height: 35rem;
+    width: 30rem;
     background-size: cover;
     background-position: center;
     background-image: url(./assets/bitter\ notes.jpg);
     border: 2px solid black;
 }
 
-.resume3{
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
+.right3 #resume3{
+    width: 72vw;
+    height: 28rem;
     background-color: rgb(73, 171, 210);
     border: 2px solid black;
-    padding: 15px;
-}
-
-.resume3 h3{
-    font-size: 35px;
-    color: black;
-}
-
-.resume3 p{
-    font-size: 21px;
-    line-height: 1.5;
-    color: black;
-}
-
-/*Review box styling*/
-.review3{
-    width: 96.7%;
-    height: 27%;
-    background-color: rgb(73, 171, 210);
-    position: absolute;
-    top: 72%;
-    left: 10px;
-    border: 2px solid black;
-    font-size: 16px;
+    margin-top: 7rem;
+    font-size: 30px;
     padding: 5px;
+}
+
+.bottom3{
+    display: grid;
+    width: 99vw;
+    height: 100%;
+    padding: 10px;
+}
+
+.bottom3 .review3{
+    background-color: rgb(73, 171, 210);
+    border: 2px solid black;
 }
 
 .review3 h3{
@@ -300,43 +288,39 @@ header.hidden:hover .menuitem{
 
 .review3 p{
     margin: 1px; /* Tilføjer lidt plads under hvert anmeldelsesafsnit */
-    font-size: 20px; /* Ændrer skriftstørrelsen efter behov */
+    font-size: 25px; /* Ændrer skriftstørrelsen efter behov */
     line-height: 2; /* Forbedrer læsbarheden ved at justere linjehøjden */
     color: black; /* Hvis du vil have teksten til at skille sig ud i den blå boks */
 }
 
-/*.image3{
-    width: 23%;
-    height: 65%;
-    position: absolute;
-    top: 2rem;
-    left: 1rem;
-    right: 60rem;
-    bottom: 1rem;
-    background-size: cover;
-    background-image: url(./assets/bitter\ notes.jpg)
-}*/
-
 #page4{
-    width: 100vw;
+    display: grid;
+    grid-template-rows: 0.1fr 2fr 1fr; /* 3 rows, top, midt og bund*/
     height: 100vh;
-    display: flex;
-    flex-direction: column; /* Arrangerer børnene vertikalt */
-    justify-content: flex-start; /* Sørger for at indholdet starter fra toppen */
-    align-items: center; /* Centrerer indholdet horisontalt */
-    padding-top: 2rem; /* Lidt afstand fra toppen */
     background-image: linear-gradient(darkgrey, black);
 }
 
-.resume4{
-    width: 73%;
-    height: 46%;
+#page4 h1{
+    margin-top: 1rem;
+    font-size: 3rem;
+    color: white;
+}
+
+.top4{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 10px;
+    gap: 1rem;
+}
+
+.left4 #resume4{
+    width: 72vw;
+    height: 28rem;
     background-color: rgb(73, 171, 210);
-    position: absolute;
-    padding: 5px;
-    top: 24%;
-    left: 1%;
     border: 2px solid black;
+    margin-top: 7rem;
+    font-size: 30px;
+    padding: 5px;
 }
 
 .resume4 h3{
@@ -350,16 +334,25 @@ header.hidden:hover .menuitem{
     line-height: 1.4;
 }
 
-.review4{
-    width: 96.7%;
-    height: 27%;
-    background-color: rgb(73, 171, 210);
-    position: absolute;
-    top: 72%;
-    left: 1%;
+.right4 #image4{
+    height: 35rem;
+    width: 30rem;
+    background-size: cover;
+    background-position: center;
+    background-image: url(./assets/sweet\ strings.jpg);
     border: 2px solid black;
-    font-size: 16px;
-    padding: 0.5rem;
+}
+
+.bottom4{
+    display: grid;
+    width: 99vw;
+    height: 100%;
+    padding: 10px;
+}
+
+.bottom4 .review4{
+    background-color: rgb(73, 171, 210);
+    border: 2px solid black;
 }
 
 .review4 h3{
@@ -371,17 +364,6 @@ header.hidden:hover .menuitem{
     font-size: 20px; /* Ændrer skriftstørrelsen efter behov */
     line-height: 2; /* Forbedrer læsbarheden ved at justere linjehøjden */
     color: black; /* Hvis du vil have teksten til at skille sig ud i den blå boks */
-}
-
-.image4{
-    width: 23%;
-    height: 65%;
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    bottom: 1rem;
-    background-size: cover;
-    background-image: url(./assets/sweet\ strings.jpg);
 }
 
 h1{
