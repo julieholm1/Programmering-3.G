@@ -1,4 +1,4 @@
-let currentPage = 1
+let currentPage = 3
 
 let pages //array med alle elementer med class = page
 let menuItems //Array med alle menupunkterne 
@@ -52,3 +52,5 @@ function keyPressed(){
     console.log(key)    
     shiftPage(key)
 }
+
+

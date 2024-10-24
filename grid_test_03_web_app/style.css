@@ -234,7 +234,7 @@ color: white;
 
 #page3 {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr; /* 3 rows, top, midt og bund*/
+    grid-template-rows: 1fr 1fr;
     background-image: linear-gradient(darkgrey, black);
 }
 
@@ -250,8 +250,14 @@ color: white;
     padding: 10px;
 }
 
+.left3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: solid 2px pink;
+}
+
 .left3 #image3{
-    height: 25rem;
+    height: 30rem;
     width: 22rem;
     background-size: cover;
     background-position: center;
@@ -267,6 +273,7 @@ color: white;
     margin-right: 2rem;
     font-size: 25px;
     padding: 5px;
+    margin-top: 2rem;
 }
 
 .bottom3{
