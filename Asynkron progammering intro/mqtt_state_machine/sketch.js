@@ -5,7 +5,11 @@ let m5NameDiv, m5StatusDiv
 //denne variabel bruges til at håndtere mqtt
 let client 
 
+//state variablen
+let state
+
 function setup() {
+  createCanvas(windowWidth, windowHeight)
   //tag fat i de to HTML elementer vi vil modificere 
   m5NameDiv = select('#m5_1 header')
   m5StatusDiv = select('#m5_1 .status')
@@ -34,5 +38,30 @@ function setup() {
     //SÅ kan vi opdatere HTML dokumentet 
     m5NameDiv.html(json.id)
     m5StatusDiv.html(json.state)
+
+    state = json.state
   })
+}
+
+
+function draw(){
+  clear()
+  if(state == 'setup'){
+    fill('blue')
+    noStroke()
+    ellipse(random (80,120), 100, 50)
+    text('setup - waiting for something', 100, 80)
+  }
+  if(state == 'game'){
+    fill('pink')
+    noStroke()
+    ellipse(random (width/2-20, width/2 + 20), 100, 50)
+    text('GAME ON!', 100, 80)
+  }
+  if(state == 'gameover'){
+    fill('red')
+    noStroke()
+    ellipse(random(width/2, width/2), 100, 50)
+    text('GAME OVER!', 100, 80)
+  }
 }
