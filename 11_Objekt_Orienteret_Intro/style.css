@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page{
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    transition: 0.6s all ease-in-out;
+}
+
+#clock{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.time{
+    font-family: Cambria;
+    font-size: 6rem;
+    height: 11rem;
+    width: 11rem;
+    border: 1px dotted hotpink;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.visible{
+    left: 0;
+    
+}
+
+#page1{
+    background-color: lightskyblue;
+}
+#page2{
+    background-color: lightpink;
+}
+#page3{
+    background-color: lightgreen;
+}
+#page4{
+    background-color: lightsalmon;
+}
+
+h1{
+    font-family: Raleway;
+    color: black
+}
