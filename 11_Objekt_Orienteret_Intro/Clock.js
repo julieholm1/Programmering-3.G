@@ -8,7 +8,8 @@ class Clock {
     constructor(div, style){
         this.div = div
         this.style = style
-        //hours, minutes, seconds
+
+        //div's for hours, minutes, seconds
         this.hDiv = createDiv()
         this.mDiv = createDiv()
         this.sDiv = createDiv()
@@ -20,7 +21,8 @@ class Clock {
         this.interval
 
         //Styles
-        this.div.style('width', '12rem')
+        this.div.style('front-size', '3rem')
+        this.div.style('width', '16rem')
         this.div.style('height', '5rem')
         this.div.style('border', '4px dotted gray')
         this.div.style('display', 'grid')
@@ -29,14 +31,21 @@ class Clock {
         this.div.style('border-radius', '2rem')
 
         //reager på argumentet styele fra constructoren
-        switch(style){
+        switch(this.style.shape){
+            case 'circle':
+                this.div.style('height', '16rem')
+                this.div.style('border-radius', '50%')
+                break
+        }
+
+        switch(this.style.background){
             case 'pink': 
                 this.div.style('background', 'hotpink')
-                return
+                break
             case 'black': 
                 this.div.style('background', 'black')
                 this.div.style('color', 'white')
-                return
+                break
         }
 
 
