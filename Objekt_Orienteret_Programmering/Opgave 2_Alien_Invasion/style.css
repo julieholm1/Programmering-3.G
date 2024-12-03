@@ -1,0 +1,48 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    margin: 20px 0;
+  }
+  
+  #container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: pink;
+  }
+  
+  .card {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    font-size: 25px;
+    
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .human {
+    background-color: #007bff;
+  }
+  
+  .alien {
+    background-color: #28a745;
+  }
+  
