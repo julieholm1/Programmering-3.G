@@ -18,7 +18,28 @@ body {
     padding: 20px;
     background-color: pink;
   }
-  
+
+  #message-container {
+    margin-top: 20px;
+    padding: 10px;
+    width: 80%;
+    place-items: center ;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:35px;
+    text-align: left;
+}
+
+#message-container img {
+  max-width: 200px;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
   .card {
     width: 150px;
     height: 200px;

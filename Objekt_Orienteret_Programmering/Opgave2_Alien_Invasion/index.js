@@ -1,30 +1,46 @@
-//'forEach' fungere som et loop, der køre arrayet "being" igennem
-//'forEach' metoden tager en funktion som argument. Den funktion køre 1 gang for hvert element i arrayet
 beings.forEach((being) => {
-    let card = document.createElement("div"); // Lav et nyt 'div'-element
+  let card = document.createElement("div");
+  
+  // Tildeler en CSS-klasse baseret på om objektet er en Alien eller Human
+  if (being instanceof Alien) {
+    card.className = "card alien";
+  } else {
+    card.className = "card human";
+  }
+  
+  card.textContent = being.name; // Sætter kortets tekst til objektets navn
 
-    // Tildeler en CSS-klasse baseret på, om objektet er en Alien eller Human.
-    // 'instanceof' tjekker om hvilken type et objekt høre til, om det er alian eller human
+  // Tilføjer klik-hændelse
+  card.addEventListener("click", () => {
+    let intro = being.introduce();
+    let alienSpeak = being instanceof Alien ? being.alienSpeak() : null;
+
+    let message = intro + (alienSpeak ? `\nAlien says: ${alienSpeak}` : "");
+
+    // Rydder eksisterende beskeder
+    let messageContainer = document.getElementById("message-container");
+    messageContainer.innerHTML = ""; 
+
+    // Skab nyt <p>-element og vis besked
+    let messageElement = document.createElement("p");
+    messageElement.textContent = message;
+    
+    // Ændrer tekstfarven afhængig af væsnet
+    messageElement.style.color = being instanceof Alien ? '#28a745' : '#007bff'; // Alien - grøn, Human - blå
+
+    // Tilføj besked til containeren
+    messageContainer.appendChild(messageElement);
+
+    // Tilføj billede baseret på væsnet
+    let imageElement = document.createElement("img");
     if (being instanceof Alien) {
-      card.className = "card alien";
-        } else {
-      card.className = "card human";
-        }
-      card.textContent = being.name; // Sætter kortets tekst til objektets navn.
+      imageElement.src = 'https://cdn.pixabay.com/photo/2023/09/24/03/08/ai-generated-8272073_1280.png';  // Erstat med et korrekt billede af Alien
+    } else {
+      imageElement.src = 'assets/elias.png';  // Erstat med et korrekt billede af Human
+    }
+    messageContainer.appendChild(imageElement);
+  });
 
-    // Tilføjer en klik-hændelse til kortet. Der tjekke om der bliver klippet på kortet
-    // hvis der bliver klikket på kortet, køres funktionen
-    card.addEventListener("click", () => {
-        let intro = being.introduce(); // Henter introduktionen fra objektet.
-        let alienSpeak = being instanceof Alien ? being.alienSpeak() : null; // Hvis objektet er en Alien, hentes en tilfældig aliensætning.
-
-        // Viser en beskedboks med introduktionen og evt. aliensprog.
-        alert(intro + (alienSpeak ? `\nAlien says: ${alienSpeak}` : ""));
-        console.log(intro + (alienSpeak ? ` Alien says: ${alienSpeak}` : ""));
-
-    });
-
-    // Tilføjer kortet til containeren i HTML-dokumentet.
-        container.appendChild(card);
+  // Tilføj kortet til containeren
+  container.appendChild(card);
 });
-
