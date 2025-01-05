@@ -9,7 +9,7 @@ class Being {
     }
   }
   
-  // Human subclass
+  // Underklasse Human 
   class Human extends Being {
     constructor(name, profession) {
       super(name); // Kalder super classens constructur og indsætter navnet
@@ -22,7 +22,7 @@ class Being {
     }
   }
   
-  // Alien subclass
+  // Underklasse Alien
   class Alien extends Being {
     constructor(name, planet) {
       super(name); // Kalder super classens constructur og indsætter navnet
@@ -41,11 +41,6 @@ class Being {
         "Klaatu barada nikto!",
         "Sharg gloop zorp!"
       ];
-      return phrases[Math.floor(Math.random() * phrases.length)]; 
-      // Math.floor() afrunder til nærmeste heltal
-      // Math.random() retunere et random tal
-      // Math.random() * phrases.length skalerer tallet til arrayets længde.
-
     }
   }
   
@@ -53,8 +48,8 @@ class Being {
   let beings = [
     new Human("Alice", "Doctor"), // Opretter en human med navn og profession
     new Human("Bob", "Engineer"),
-    new Human("Charlie", "Teacher"),
-    new Alien("Zorg", "Xenon"), // Opretter en alien med navn og planet
-    new Alien("Blip", "Alpha Centauri"),
-    new Alien("Gror", "Omicron Persei 8")
+    new Human("Peter", "Teacher"),
+    new Alien("Ding", "Xenon"), // Opretter en alien med navn og planet
+    new Alien("Dong", "Alpha Centauri"),
+    new Alien("Blip", "Omicron Persei 8")
   ];
