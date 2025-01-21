@@ -30,7 +30,7 @@ class Being {
     }
   
     introduce() {
-    // Overskriver superklassens introduce-metode for at inkludere planet
+    // Overskriver superklassens introduce metode for at inkludere planet
       return `Greetings! I'm ${this.name} from planet ${this.planet}.`;
     }
   
@@ -44,7 +44,7 @@ class Being {
     }
   }
   
-  // Opretter et array med human- og alien objekter
+  // Opretter et array med human og alien objekter
   let beings = [
     new Human("Alice", "Doctor"), // Opretter en human med navn og profession
     new Human("Bob", "Engineer"),

@@ -25,8 +25,8 @@ beings.forEach((being) => {
     let messageElement = document.createElement("p");
     messageElement.textContent = message;
     
-    // Ændrer tekstfarven afhængig af væsnet
-    messageElement.style.color = being instanceof Alien ? '#28a745' : '#007bff'; // Alien - grøn, Human - blå
+    // Ændrer tekstfarven afhængig af being 
+    messageElement.style.color = being instanceof Alien ? '#28a745' : '#007bff';
 
     // Tilføj besked til containeren
     messageContainer.appendChild(messageElement);
